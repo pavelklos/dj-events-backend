@@ -36,7 +36,7 @@ module.exports = {
       // entity = await strapi.services.events.create(data, { files });
       entity = await strapi.services.events.create(data, { files });
     } else {
-      ctx.request.body.author = ctx.state.user.id;
+      ctx.request.body.user = ctx.state.user.id;
       // entity = await strapi.services.article.create(ctx.request.body);
       entity = await strapi.services.events.create(ctx.request.body);
     }
